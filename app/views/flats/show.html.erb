@@ -1,0 +1,9 @@
+<div class="card-body">
+  <h2 class="card-title"><%= @flat.name %></h2>
+  <p class="card-title"><%= @flat.address %></p>
+  <p class="card-title"><%= @flat.description %></p>
+  <p class="card-title"><%= @flat.price_per_night %></p>
+  <p class="card-title"><%= @flat.number_of_guests %></p>
+  <p class="card-text"><%= link_to 'Remove flat', method: :delete %></p>
+  <p class="card-text"><%= link_to 'Go back to see all flats', flats_path %></p>
+ </div>

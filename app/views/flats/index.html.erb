@@ -1,0 +1,21 @@
+<div class="container">
+  <%= "All our flats" %>
+  <p class="card-text"><%= link_to 'Add new flat', new_flat_path %></p>
+  <div class="card-columns">
+    <%= @flats.each do |flat| %>
+      <div class="card">
+        <img src="" alt="">
+        <div class="card-body">
+          <h5 class="card-title"><%= flat.name %></h5>
+          <p class="card-title"><%= flat.address %></p>
+          <p class="card-title"><%= flat.description %></p>
+          <p class="card-title"><%= flat.price_per_night %></p>
+          <p class="card-title"><%= flat.number_of_guests %></p>
+          <p class="card-text"><%= link_to 'More info', flat_path(flat) %></p>
+          <p class="card-text"><%= link_to 'Edit', edit_flat_path(flat) %></p>
+          <p class="card-text"><%= link_to 'Remove flat', method: :delete %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
